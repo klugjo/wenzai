@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "compile": "sass ./styles.scss ./styles.css"
-  },
-  "dependencies": {
-    "sass": "^1.26.7",
-    "uikit": "^3.5.3"
-  }
-}

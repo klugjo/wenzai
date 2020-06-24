@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="295px" height="77px" viewBox="0 0 295 77" version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Page 1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-71.000000, -66.000000)">
+            <polygon id="I" fill="#000000" fill-rule="nonzero" points="343.641568 143 345.011719 136.144531 358.3125 73.390625 359.904163 66.5351562 352.155144 66.5351562 350.285156 73.390625 336.984375 136.144531 335.541972 143"></polygon>
+            <text id="." font-family="AnonymousPro-Italic, Anonymous Pro" font-size="120" font-style="italic" font-weight="normal" fill="#FF002E">
+                <tspan x="336" y="143">.</tspan>
+            </text>
+            <text id="Λ" font-family="AnonymousPro-Italic, Anonymous Pro" font-size="120" font-style="italic" font-weight="normal" fill="#000000">
+                <tspan x="277" y="143">Λ</tspan>
+            </text>
+            <polygon id="Z" fill="#000000" fill-rule="nonzero" points="271.171875 143 272.664577 136.144531 233.378906 136.144531 284.765625 73.390625 286.171875 66.5351562 238.300781 66.5351562 232.910156 92.140625 239.765625 92.140625 243.691406 73.390625 275.273438 73.390625 223.535156 136.144531 222.128906 143"></polygon>
+            <text id="N" font-family="AnonymousPro-Italic, Anonymous Pro" font-size="120" font-style="italic" font-weight="normal" fill="#000000">
+                <tspan x="169" y="143">N</tspan>
+            </text>
+            <text id="E" font-family="AnonymousPro-Italic, Anonymous Pro" font-size="120" font-style="italic" font-weight="normal" fill="#000000">
+                <tspan x="122" y="143">E</tspan>
+            </text>
+            <text id="W" font-family="AnonymousPro-Italic, Anonymous Pro" font-size="120" font-style="italic" font-weight="normal" fill="#000000">
+                <tspan x="67" y="143">W</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
