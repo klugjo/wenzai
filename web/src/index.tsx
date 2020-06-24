@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import store from './utils/store';
 import { Provider } from 'react-redux';
 import Routing from './app/Root/Routing';
+
+import './index.less';
 
 ReactDOM.render(
   <React.StrictMode>

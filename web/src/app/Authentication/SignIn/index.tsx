@@ -1,26 +1,24 @@
 import React from 'react';
+import { Input, Button } from 'antd';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 import styles from './styles.module.css';
 
 const SignIn: React.FC = () => {
   return (
     <div className={styles.root}>
-      <div className="uk-position-center">
-        <form className="uk-form-horizontal uk-margin-large">
-          <div className="uk-margin">
-            <div className="uk-inline">
-              <span className="uk-form-icon" uk-icon="icon: user"></span>
-              <input className="uk-input uk-form-large" type="text" placeholder="Your Email" />
-            </div>
-          </div>
-
-          <div className="uk-margin">
-            <div className="uk-inline">
-              <span className="uk-form-icon" uk-icon="icon: lock"></span>
-              <input className="uk-input uk-form-large" type="password" placeholder="Password" />
-            </div>
-          </div>
-        </form>
+      <div className={styles.panel}>
+        <div className={styles.field}>
+          <Input size="large" placeholder="Email" prefix={<UserOutlined />} />
+        </div>
+        <div className={styles.field}>
+          <Input size="large" placeholder="Password" type="password" prefix={<LockOutlined />} />
+        </div>
+        <div className={styles.field}>
+          <Button type="primary" size="large">
+            Login
+          </Button>
+        </div>
       </div>
     </div>
   );
