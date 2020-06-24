@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import * as ROUTES from '../../../utils/routes';
-import SignIn from '../../Authentication/SignIn';
+import SignIn from '../../Authentication/SignIn/SignIn';
 
 const Routing = () => {
   return (

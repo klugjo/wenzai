@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.left {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #D6D6CE;
+}
+
+.left svg {
+  width: 80%;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 62%;
+  min-width: 656px;
+  min-height: 100vh;
+}
+
+.right .panel {
+  width: 100%;
+  max-width: 400px;
+}
+
+.right .panel .field {
+  margin: 32px 0;
+}
+
+.right .panel button {
+  width: 100%;
+}
