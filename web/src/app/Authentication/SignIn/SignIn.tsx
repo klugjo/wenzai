@@ -1,64 +1,61 @@
 import React from 'react';
 import { Input, Button, Typography, Form, Checkbox } from 'antd';
 import { ReactComponent as SelectionSvg } from '../../../assets/svg/selection.svg';
+import { ReactComponent as LogoSvg } from '../../../assets/svg/logo-abbreviated.svg';
+import { signInRequested } from '../authReducer';
+import { useDispatch } from 'react-redux';
 
 import styles from './SignIn.module.css';
 
 const { Title } = Typography;
 
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
-const tailLayout = {
-  wrapperCol: { offset: 8, span: 16 },
-};
-
 const SignIn: React.FC = () => {
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
-  };
+  const dispatch = useDispatch();
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
+  const onFinish = ({ email, password }: any) => {
+    dispatch(signInRequested({ email, password }));
   };
 
   return (
     <div className={styles.root}>
+      <div className={styles.logo}>
+        <LogoSvg />
+      </div>
       <div className={styles.left}>
         <SelectionSvg />
       </div>
       <div className={styles.right}>
         <div className={styles.panel}>
-          <Title>Sign in to Wenzai</Title>
+          <Title>SIGN IN TO WENZΛI</Title>
+          <br />
           <Form
-            {...layout}
             name="basic"
+            layout="vertical"
+            hideRequiredMark={true}
             initialValues={{ remember: true }}
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
           >
             <Form.Item
               label="Username"
               name="username"
-              rules={[{ required: true, message: 'Please input your username!' }]}
+              rules={[{ required: true, message: 'Please input your username' }]}
             >
-              <Input />
+              <Input /> 
             </Form.Item>
 
             <Form.Item
               label="Password"
               name="password"
-              rules={[{ required: true, message: 'Please input your password!' }]}
+              rules={[{ required: true, message: 'Please input your password' }]}
             >
               <Input.Password />
             </Form.Item>
 
-            <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+            <Form.Item name="remember" valuePropName="checked">
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
 
-            <Form.Item {...tailLayout}>
+            <Form.Item>
               <Button type="primary" size="large" htmlType="submit">
                 Submit
               </Button>
