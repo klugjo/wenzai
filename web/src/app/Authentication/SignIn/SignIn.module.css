@@ -33,7 +33,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 62%;
+  width: 100%;
   min-width: 656px;
   min-height: 100vh;
 }

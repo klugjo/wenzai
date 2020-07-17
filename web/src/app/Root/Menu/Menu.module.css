@@ -1,0 +1,40 @@
+.root {
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #292A30;
+  padding-right: 16px;
+}
+
+.logo {
+  margin: 0 32px;
+
+}
+
+.logo svg {
+  width: 50px;
+}
+
+.item {
+  margin: 0 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #d6d6ce;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item:hover {
+  color: #FFF;
+}
+
+.item svg {
+  font-size: 26px;
+}
+
+.separator {
+  flex-grow: 1;
+}

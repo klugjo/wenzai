@@ -1,6 +1,5 @@
 import React from 'react';
 import { Input, Button, Typography, Form, Checkbox } from 'antd';
-import { ReactComponent as SelectionSvg } from '../../../assets/svg/selection.svg';
 import { ReactComponent as LogoSvg } from '../../../assets/svg/logo-abbreviated.svg';
 import { signInRequested } from '../authReducer';
 import { useDispatch } from 'react-redux';
@@ -21,12 +20,9 @@ const SignIn: React.FC = () => {
       <div className={styles.logo}>
         <LogoSvg />
       </div>
-      <div className={styles.left}>
-        <SelectionSvg />
-      </div>
       <div className={styles.right}>
         <div className={styles.panel}>
-          <Title>SIGN IN TO WENZΛI</Title>
+          <Title>HAVE AN ACCOUNT ?</Title>
           <br />
           <Form
             name="basic"
@@ -36,15 +32,15 @@ const SignIn: React.FC = () => {
             onFinish={onFinish}
           >
             <Form.Item
-              label="Username"
-              name="username"
-              rules={[{ required: true, message: 'Please input your username' }]}
+              label="Your email goes here"
+              name="email"
+              rules={[{ required: true, message: 'Please input your email' }]}
             >
               <Input /> 
             </Form.Item>
 
             <Form.Item
-              label="Password"
+              label="Your password goes there"
               name="password"
               rules={[{ required: true, message: 'Please input your password' }]}
             >
@@ -52,12 +48,12 @@ const SignIn: React.FC = () => {
             </Form.Item>
 
             <Form.Item name="remember" valuePropName="checked">
-              <Checkbox>Remember me</Checkbox>
+              <Checkbox>I want to stay logged in</Checkbox>
             </Form.Item>
 
             <Form.Item>
               <Button type="primary" size="large" htmlType="submit">
-                Submit
+                Let's go !
               </Button>
             </Form.Item>
           </Form>
