@@ -1,19 +1,9 @@
 .root {
-  height: 64px;
+  height: 96px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #292A30;
-  padding-right: 16px;
-}
-
-.logo {
-  margin: 0 32px;
-
-}
-
-.logo svg {
-  width: 50px;
+  background: #000;
 }
 
 .item {
@@ -22,9 +12,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #d6d6ce;
-  font-size: 16px;
-  font-weight: 600;
+  color: #606061;
+  font-size: 18px;
+  transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .item:hover {
@@ -32,9 +23,24 @@
 }
 
 .item svg {
+  width: 32px;
   font-size: 26px;
+  margin-right: 16px;
+  transition: font-size 0.5s ease;
+}
+
+.item:hover svg {
+  font-size: 38px;
 }
 
 .separator {
   flex-grow: 1;
+}
+
+.mainMenuItems {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

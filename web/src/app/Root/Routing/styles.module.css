@@ -11,5 +11,7 @@
 
 .content {
   flex-grow: 1;
-  background: #d6d6ce;
+  background: #151517;
+  color: white;
+  overflow-y: scroll;
 }

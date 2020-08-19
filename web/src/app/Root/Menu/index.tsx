@@ -1,17 +1,20 @@
 import React from 'react';
-import { AiOutlineUser } from 'react-icons/ai';
+import { AiOutlineRocket, AiOutlineHome, AiOutlineBuild, AiOutlineSearch, AiOutlineDashboard } from 'react-icons/ai';
 import { ReactComponent as LogoSvg } from '../../../assets/svg/logo-abbreviated-inverted.svg';
 
 import styles from './Menu.module.css';
 
 interface IMenuItemProps {
   content: React.ReactNode;
+  icon: React.ReactNode;
 }
 
 const MenuItem: React.FC<IMenuItemProps> = ({
-  content
+  content,
+  icon
 }: IMenuItemProps) => (
     <div className={styles.item}>
+      {icon}
       {content}
     </div>
   );
@@ -19,15 +22,15 @@ const MenuItem: React.FC<IMenuItemProps> = ({
 const Menu: React.FC = () => {
   return (
     <div className={styles.root}>
-      <div className={styles.logo}>
-        <LogoSvg />
-      </div>
-      <MenuItem content="Home" />
-      <MenuItem content="Decks" />
-      <MenuItem content="Practice" />
-      <MenuItem content="Explore" />
       <div className={styles.separator} />
-      <MenuItem content={<AiOutlineUser />} />
+      <div className={styles.mainMenuItems}>
+        <MenuItem content="Home" icon={<AiOutlineHome />} />
+        <MenuItem content="Decks" icon={<AiOutlineBuild />} />
+        <MenuItem content="Practice" icon={<AiOutlineRocket />} />
+        <MenuItem content="Explore" icon={<AiOutlineSearch />} />
+        <MenuItem content="Settings" icon={<AiOutlineDashboard />} />
+      </div>
+      <div className={styles.separator} />
     </div>
   );
 };

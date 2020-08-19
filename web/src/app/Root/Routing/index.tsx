@@ -30,9 +30,6 @@ const Routing = () => {
   } else {
     return (
       <div className={styles.root}>
-        <div className={styles.menu}>
-          <Menu />
-        </div>
         <div className={styles.content}>
           <Router>
             <Switch>
@@ -40,6 +37,9 @@ const Routing = () => {
               <Route exact path={ROUTES.DECKS} component={() => <div>Decks</div>} />
             </Switch>
           </Router>
+        </div>
+        <div className={styles.menu}>
+          <Menu />
         </div>
       </div>
     );
