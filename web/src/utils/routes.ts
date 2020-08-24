@@ -7,3 +7,6 @@ export const DECK_EDIT = (id: string = ':id') => `/deck/edit/${id}`;
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
+export const PRACTICE = '/practice';
+export const EXPLORE = '/explore';
+export const SETTINGS = '/settings';

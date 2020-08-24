@@ -18,7 +18,8 @@
   transition: color 0.5s ease;
 }
 
-.item:hover {
+.item:hover,
+.item.selected {
   color: #FFF;
 }
 
@@ -29,7 +30,8 @@
   transition: font-size 0.5s ease;
 }
 
-.item:hover svg {
+.item:hover svg,
+.item.selected svg {
   font-size: 38px;
 }
 

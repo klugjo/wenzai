@@ -5,9 +5,9 @@ import SignIn from '../../Authentication/SignIn/SignIn';
 import { useDispatch, useSelector } from 'react-redux';
 import { appStarted } from '../rootReducer';
 import { IMainState } from '../../../typings';
+import Menu from '../Menu';
 
 import styles from './styles.module.css';
-import Menu from '../Menu';
 
 const Routing = () => {
   const dispatch = useDispatch();
@@ -29,19 +29,22 @@ const Routing = () => {
     );
   } else {
     return (
-      <div className={styles.root}>
-        <div className={styles.content}>
-          <Router>
+      <Router>
+        <div className={styles.root}>
+          <div className={styles.content}>
             <Switch>
               <Route exact path={ROUTES.HOME} component={() => <div style={{ height: '150vh' }}>Home</div>} />
               <Route exact path={ROUTES.DECKS} component={() => <div>Decks</div>} />
+              <Route exact path={ROUTES.PRACTICE} component={() => <div>Practice</div>} />
+              <Route exact path={ROUTES.EXPLORE} component={() => <div>Explore</div>} />
+              <Route exact path={ROUTES.SETTINGS} component={() => <div>Settings</div>} />
             </Switch>
-          </Router>
+          </div>
+          <div className={styles.menu}>
+            <Menu />
+          </div>
         </div>
-        <div className={styles.menu}>
-          <Menu />
-        </div>
-      </div>
+      </Router>
     );
   }
 }
