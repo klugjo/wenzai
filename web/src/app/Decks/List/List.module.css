@@ -1,25 +1,108 @@
 .root {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   max-width: 1200px;
+  flex-grow: 1;
+}
+
+.header {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 48px;
+  color: #FFF;
+}
+
+.header h1 span {
+  color: #ff002e;
+}
+
+.header .newDeckButton {
+  background: #FFF;
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 33%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header .newDeckButton:hover {
+  background: #ff002e;
+  color: #FFF;
+  font-size: 22px;
 }
 
 .deck {
-  padding: 64px;
-  background-color: #000;
-  width: 368px;
-  margin: 16px;
-  font-size: 18px;
-  border: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  padding: 24px 32px;
+  background-color: #0D0D0E;
+  border-radius: 16px;
+  margin: 16px 0;
+  border: 1px solid #0D0D0E;
   transition: all 0.5s ease;
   position: relative;
   color: #FFF;
-  border-right: 1px solid #606061;
+  border: 1px solid #000;
+  cursor: pointer;
 }
 
 .deck:hover {
-  cursor: pointer;
   color: #FFF;
-  border-right: 8px solid #FFF;
+  border: 1px solid #606061;
+}
+
+.deck .icon {
+  font-size: 32px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.deck .titleContainer {
+  flex-grow: 1;
+}
+
+.deck .title {
+  font-size: 18px;
+}
+
+.deck .type {
+  color: #606061;
+}
+
+.deck .separator {
+  flex-grow: 1;
+}
+
+.deck .button {
+  background: #FFF;
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 33%;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 24px;
+}
+
+.deck .button:hover {
+  background: #ff002e;
+  color: #FFF;
+  font-size: 22px;
 }
