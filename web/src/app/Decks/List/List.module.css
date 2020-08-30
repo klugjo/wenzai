@@ -26,32 +26,36 @@
 .header .newDeckButton {
   background: #FFF;
   color: black;
-  width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 33%;
-  font-size: 20px;
+  border-radius: 13px;
+  padding: 0 24px;
+  font-size: 18px;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.header .newDeckButton svg {
+  margin-right: 16px;
+  font-size: 22px;
 }
 
 .header .newDeckButton:hover {
   background: #ff002e;
   color: #FFF;
-  font-size: 22px;
 }
 
 .deck {
   display: flex;
   flex-direction: row;
   padding: 24px 32px;
-  background-color: #0D0D0E;
+  background-color: #000;
   border-radius: 16px;
   margin: 16px 0;
-  border: 1px solid #0D0D0E;
-  transition: all 0.5s ease;
+  border: 1px solid #000;
+  transition: all 0.2s ease;
   position: relative;
   color: #FFF;
   border: 1px solid #000;
@@ -60,7 +64,8 @@
 
 .deck:hover {
   color: #FFF;
-  border: 1px solid #606061;
+  background: #0D0D0E;
+  border: 1px solid #0D0D0E;
 }
 
 .deck .icon {
@@ -86,7 +91,19 @@
   flex-grow: 1;
 }
 
-.deck .button {
+.deck .action {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.deck .action .mainAction,
+.deck .action .secondaryAction {
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+.deck .action .mainAction .actionButton,
+.deck .action .secondaryAction .actionButton {
   background: #FFF;
   color: black;
   width: 40px;
@@ -96,13 +113,35 @@
   align-items: center;
   border-radius: 33%;
   font-size: 22px;
-  cursor: pointer;
   transition: all 0.2s ease;
-  margin-left: 24px;
 }
 
-.deck .button:hover {
+.deck .action .mainAction .actionLabel,
+.deck .action .secondaryAction .actionLabel {
+  width: 40px;
+  color: transparent;
+  text-align: center;
+  margin-top: 5px;
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.deck:hover .action .mainAction .actionButton,
+.deck .action .secondaryAction:hover .actionButton {
   background: #ff002e;
   color: #FFF;
-  font-size: 22px;
+}
+
+.deck:hover .action .mainAction .actionLabel,
+.deck .action .secondaryAction:hover .actionLabel {
+  color: #606061;
+}
+
+.deck:hover .action .secondaryAction:hover ~ .mainAction .actionButton {
+  background: #FFF;
+  color: black;
+}
+
+.deck:hover .action .secondaryAction:hover ~ .mainAction .actionLabel {
+  color: transparent;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import { GiAfrica, GiCupcake, GiNoodles, GiJapan, GiMusicalNotes } from 'react-icons/gi';
-import { AiOutlinePlus, AiOutlineEdit, AiOutlineRocket, AiOutlineDelete } from 'react-icons/ai';
+import { AiOutlinePlusCircle, AiOutlineEdit, AiOutlineRocket, AiOutlineDelete } from 'react-icons/ai';
 
 import styles from './List.module.css';
 
@@ -47,7 +47,7 @@ const DeckList: React.FC<IDeckListProps> = () => {
     <div className={styles.root}>
       <div className={styles.header}>
         <h1><span>.</span>DECKS</h1>
-        <div className={styles.newDeckButton}><AiOutlinePlus /></div>
+        <div className={styles.newDeckButton}><AiOutlinePlusCircle /><span>New</span></div>
       </div>
       {decks.map(deck => (
         <div className={styles.deck} key={deck.id}>
@@ -57,9 +57,26 @@ const DeckList: React.FC<IDeckListProps> = () => {
             <div className={styles.type}>{deck.type}</div>
           </div>
           <div className={styles.separator} />
-          <div className={cn(styles.button, styles.mainButton)}><AiOutlineEdit /></div>
-          <div className={styles.button}><AiOutlineRocket /></div>
-          <div className={styles.button}><AiOutlineDelete /></div>
+          <div className={styles.action}>
+            <div className={styles.secondaryAction}>
+              <div className={styles.actionButton}>
+                <AiOutlineDelete />
+              </div>
+              <div className={styles.actionLabel}>Delete</div>
+            </div>
+            <div className={styles.secondaryAction}>
+              <div className={styles.actionButton}>
+                <AiOutlineRocket />
+              </div>
+              <div className={styles.actionLabel}>Learn</div>
+            </div>
+            <div className={styles.mainAction}>
+              <div className={styles.actionButton}>
+                <AiOutlineEdit />
+              </div>
+              <div className={styles.actionLabel}>Edit</div>
+            </div>
+          </div>
         </div>
       ))}
     </div>

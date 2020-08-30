@@ -15,7 +15,7 @@
   color: white;
   overflow-y: scroll;
   padding: 32px 64px;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   display: flex;
 }
