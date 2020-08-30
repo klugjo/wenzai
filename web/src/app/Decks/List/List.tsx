@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from 'classnames';
 import { GiAfrica, GiCupcake, GiNoodles, GiJapan, GiMusicalNotes } from 'react-icons/gi';
 import { AiOutlinePlusCircle, AiOutlineEdit, AiOutlineRocket, AiOutlineDelete } from 'react-icons/ai';
 
